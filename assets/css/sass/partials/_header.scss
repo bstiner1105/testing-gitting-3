@@ -1,0 +1,83 @@
+#header {
+  width:100%;
+  display:block;
+  padding:1rem 0;
+  position: fixed;
+  top:0;
+  background-color: $white-color;
+  //background-color: rgba(0,0,0,0.2);
+
+
+  z-index: 100;
+
+  .inner {
+    width:100%;
+    margin:0 auto;
+    max-width:1680px;
+    padding:0 1.25rem;
+    box-sizing: border-box;
+  }
+}
+
+
+@media screen and (min-width: $tablet-standard) {
+  #header {
+    .inner {
+      padding:0 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-standard) {
+  #header {
+    padding:3.125rem 0 6.25rem 0;
+  }
+}
+
+
+
+#logo {
+  @include bg-img(100%);
+  width: 13.5rem;
+  height:3.625rem;
+  display:inline-block;
+  text-indent: -9999rem;
+  top: 0.5rem;
+  position: relative;
+}
+
+@media screen and (min-width: $tablet-small) {
+  #logo {
+    width:14.75rem;
+  }
+}
+
+@media screen and (min-width: $screen-small) {
+  #logo {
+    width:17rem;
+    height:4.125rem;
+  }
+}
+
+
+@media screen and (min-width: $screen-standard) {
+  #logo {
+    width: 15.3125rem;
+    height: 3.75rem;
+  }
+}
+
+
+
+
+@media screen and (min-width: $screen-large) {
+  #logo {
+    width:20.3125rem;
+    height:5rem;
+  }
+}
+
+
+
+
+

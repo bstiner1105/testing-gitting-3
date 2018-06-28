@@ -1,0 +1,101 @@
+/***************************************************************\
+	Navigation Toggle
+\***************************************************************/
+
+
+#nav-toggle {
+  font-size:1rem;
+  float:right;
+  width:2.375rem;
+  height:2.375rem;
+  display:block;
+  right:1.25rem;
+  top: 1.625rem;
+  text-indent:-9999rem;
+  position:absolute;
+  z-index: 120;
+
+  .navigation--is-open & {
+    margin-top: 0.125rem;
+  }
+}
+
+@media screen and (min-width: $tablet-small) {
+  #nav-toggle {
+    top: 1.5rem;
+  }
+}
+
+
+
+@media screen and (min-width: $tablet-standard) {
+  #nav-toggle {
+    right:2rem;
+  }
+}
+
+@media screen and (min-width:$screen-standard) {
+  #nav-toggle{
+	display: none;
+  }
+}
+
+#nav-toggle span:first-child {
+  display:none;
+}
+
+
+.nav-toggle {
+  &__line-one,
+  &__line-two,
+  &__line-three {
+    width: 100%;
+    margin-bottom: 9px;
+    height:2px;
+    clear: left;
+    float: left;
+    background-color: $text-color;
+    display: inline;
+    text-indent:-9999rem;
+    -webkit-transition: background-color 0.2s, opacity 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: background-color 0.2s, opacity 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: background-color 0.2s, transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: background-color 0.2s, transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transform: translateY(0) translateZ(0);
+    transform: translateY(0) translateZ(0);
+
+    .navigation--is-open & {
+      //background-color:#fff;
+    }
+  }
+
+
+  &__line-one {
+    .navigation--is-open & {
+      -webkit-transform: translateY(13px) rotate(45deg);
+      -ms-transform: translateY(13px) rotate(45deg);
+      transform: translateY(13px) rotate(45deg);
+    }
+  }
+
+  &__line-two {
+    .navigation--is-open & {
+      background-color:transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  &__line-three {
+    .navigation--is-open & {
+      margin-top: 6px;
+      -webkit-transform: translateY(-15px) rotate(-45deg);
+      -ms-transform: translateY(-15px) rotate(-45deg);
+      transform: translateY(-15px) rotate(-45deg)
+    }
+  }
+
+
+}
+

@@ -1,0 +1,118 @@
+.columns {
+  width:100%;
+  margin:0 auto;
+  max-width:1324px;
+  padding:0 1.25rem 5rem 1.25rem;
+  box-sizing: border-box;
+
+  .column {
+	width:100%;
+	margin-top:2rem;
+	&:first-child {
+	  margin-top:0;
+	}
+
+	&-image {
+	  padding-top:56.25%;
+	  background-color: $primary-color;
+	}
+
+	&-content {
+	  margin:1.5rem auto 2rem auto;
+	}
+  }
+
+  h3 {
+	color:$white-color;
+	font-size:1.375rem;
+	margin-bottom:0.5rem;
+  }
+}
+
+@media screen and (min-width: $tablet-small) {
+  .columns {
+	h3 {
+	  font-size:1.5rem;
+	}
+  }
+}
+
+
+@media screen and (min-width: $tablet-standard) {
+  .columns {
+	padding:0 2rem 7.5rem 2rem;
+
+	.column {
+	  &-content {
+		margin:1.75rem auto 2.75rem auto;
+	  }
+	}
+  }
+}
+
+
+@media screen and (min-width: $tablet-large) {
+  .columns {
+
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+
+
+	.column {
+	  width:calc((100% - 3.75rem) / 2);
+	  margin-right:3.75rem;
+	  margin-top:0;
+	  display:table;
+
+	  &:nth-child(2n) {
+		margin-right:0;
+	  }
+
+	  &-content {
+		margin:2rem auto 3rem auto;
+	  }
+	}
+
+	h3 {
+	  font-size:1.75rem;
+	}
+  }
+}
+
+
+@media screen and (min-width: $screen-small) {
+  .columns {
+	padding:0 2rem 11rem 2rem;
+	h3 {
+	  font-size:1.875rem;
+	}
+  }
+}
+
+@media screen and (min-width: $screen-standard) {
+  .columns {
+	h3 {
+	  font-size:2rem;
+	}
+  }
+}
+
+
+@media screen and (min-width: $screen-large) {
+  .columns {
+	h3 {
+	  font-size:2.1875rem;
+	  margin-bottom:0.5rem;
+	}
+  }
+}
+
+
+#content .block--has-columns .inner {
+  padding-bottom:2rem;
+}
+

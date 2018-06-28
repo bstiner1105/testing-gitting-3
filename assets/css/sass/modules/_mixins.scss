@@ -1,0 +1,20 @@
+//@mixin bg-image($url,$color:transparent) {
+//  background: {
+//    color:$color;
+//    repeat:no-repeat;
+//    size:100%;
+//    position:center center;
+//    image:url($url);
+//  }
+//}
+
+
+
+@mixin bg-img($size:cover,$color:transparent) {
+  background: {
+    repeat:no-repeat;
+    color:$color;
+    size:$size;
+    position:center center;
+  }
+}

@@ -1,0 +1,248 @@
+.footer {
+  background-image:linear-gradient(to right,#21BFC1,#1ABFC6,#14BECB,#0DBDD0,#06BCD5,#00BCDA,#00BBDE,#00BAE1,#00BAE3,#00B9E8,#00B9ED,#00B8F1);
+  color: $text-color;
+  margin:0 auto;
+  text-align: center;
+  padding-top:2.5rem;
+
+  &-logo {
+	opacity:0.5;
+	margin:0 auto 3.75rem auto;
+	width:100%;
+	text-align: center;
+	padding:0 2rem;
+	box-sizing: border-box;
+
+	img {
+	  //max-width:490px;
+	  //width:100%;
+	  max-width:250px;
+	  width:100%;
+	}
+
+  }
+
+  &-navigation {
+	list-style: none;
+	margin:0 auto 1rem auto;
+	padding:0;
+	display:inline-block;
+	font-size: 1rem;
+
+	&__item {
+	  display:inline-block;
+	  margin-right:1.25rem;
+	  position: relative;
+	  &:last-child {
+		margin-right:0;
+		&:after {
+		  display:none;
+		}
+	  }
+
+	  &:after {
+		content:"";
+		background-color:$text-color;
+		display:block;
+		width:1px;
+		height:70%;
+		position:absolute;
+		top:15%;
+		right:-0.75rem;
+
+	  }
+
+	}
+
+	&__link {
+	  display:block;
+	  color: $text-color;
+	}
+  }
+
+  .no-touch &-navigation__link:hover {
+	color: $text-color;
+	text-decoration: underline;
+  }
+}
+
+
+@media screen and (min-width: $tablet-small) {
+  .footer {
+
+	&-logo {
+	  img {
+		max-width:320px;
+		width:60%;
+	  }
+	}
+
+	&-navigation {
+	  font-size:1.125rem;
+	}
+  }
+}
+
+
+@media screen and (min-width: $tablet-large) {
+  .footer {
+	&-navigation {
+	  font-size:1.25rem;
+	}
+  }
+}
+
+@media screen and (min-width: $screen-small) {
+  .footer {
+
+
+	&-logo {
+	  img {
+		max-width:380px;
+		width:100%;
+	  }
+	}
+  }
+}
+
+@media screen and (min-width: $screen-standard) {
+  .footer {
+
+	&-logo {
+	  img {
+		max-width:490px;
+	  }
+	}
+	&-navigation {
+	  font-size:1.375rem;
+	}
+  }
+}
+
+
+@media screen and (min-width: $screen-large) {
+  .footer {
+
+	&-navigation {
+	  font-size:1.5rem;
+	}
+  }
+}
+
+.legal {
+  display:none;
+  width:100%;
+  max-width:954px;
+  margin:0 auto;
+  padding:0 1.25rem;
+  box-sizing: border-box;
+  font-size:1rem;
+  text-align: left;
+
+  &.is--active {
+	display:block;
+  }
+
+  &-block {
+	padding:2rem 0;
+
+	&#privacy {
+	  padding-top:4rem;
+	}
+  }
+
+  //&-title {
+  h2,
+  h3 {
+	color:$white-color;
+	margin-bottom:1.25rem;
+	font: {
+	  family: $font-bold;
+	  size:1.125rem;
+
+	}
+  }
+  h2 {
+	font-size:1.375rem;
+  }
+
+  p {
+	margin-bottom:2rem;
+  }
+}
+
+
+@media screen and (min-width: $tablet-standard) {
+  .legal {
+	padding:0 2rem;
+	box-sizing: border-box;
+	&-block {
+	  &#privacy {
+		padding-top:5rem;
+	  }
+	}
+  }
+}
+
+
+
+.close-button {
+  font-size:1rem;
+  width:1.875rem;
+  height:1.5rem;
+  display:block;
+  position:relative;
+  text-indent:-9999rem;
+  margin:1rem auto 1rem 0;
+  //margin-left:-0.25rem;
+  //margin-top:1rem;
+
+  &:after,
+  &:before {
+	content: "";
+	width: 100%;
+	position: absolute;
+	height: 2px;
+	background-color: $white-color;
+	display: block;
+	border: {
+	  bottom-right-radius: 2px;
+	  bottom-left-radius: 2px;
+	  top-right-radius: 2px;
+	  top-left-radius: 2px;
+	}
+	-webkit-transition: background-color 0.2s;
+	-moz-transition: background-color 0.2s;
+	-o-transition: background-color 0.2s;
+	transition:background-color 0.2s;
+  }
+
+  &:before {
+	-webkit-transform: translateY(13px) rotate(45deg);
+	-ms-transform: translateY(13px) rotate(45deg);
+	transform: translateY(13px) rotate(45deg);
+
+  }
+
+  &:after {
+	margin-top: 4px;
+	-webkit-transform: translateY(-16px) rotate(-45deg);
+	-ms-transform: translateY(-16px) rotate(-45deg);
+	transform: translateY(-16px) rotate(-45deg)
+  }
+
+  &:hover:after,
+  &:hover:before {
+	color:$text-color;
+  }
+
+
+}
+
+
+/*== Firefox Fix ==*/
+@-moz-document url-prefix() {
+  .close-button:after {
+	margin-top: 3px;
+  }
+}

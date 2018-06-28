@@ -1,0 +1,154 @@
+.contact {
+  color:$white-color;
+
+  #content & .inner {
+	text-align: center;
+  }
+
+  &-mail {
+	//text-decoration: underline;
+	.no-touch &:hover {
+	  //text-decoration: none;
+	  text-decoration: underline;
+	  color: $white-color;
+	}
+  }
+
+  &-mail,
+  &-tel {
+	color:$white-color;
+	margin-bottom:1.5rem;
+	display: block;
+	font: {
+	  size:1.75rem;
+	  weight: normal;
+	  family: $font-bold;
+	}
+  }
+
+  &-tel {
+	.no-touch &:hover {
+	  text-decoration: underline;
+	  color:$white-color;
+	}
+  }
+
+  &-address {
+	color:$text-color;
+	line-height:1.3;
+	font: {
+	  family: $font-regular;
+	  style:normal;
+	  size:1.125rem;
+
+	}
+	span {
+	  font-size:1.25rem;
+	}
+  }
+
+}
+
+
+
+@media screen and (min-width: $tablet-small) {
+  .contact {
+
+	&-mail,
+	&-tel {
+	  margin-bottom:2rem;
+	  font-size: 1.875rem;
+	}
+
+	&-address {
+	  font-size:1.25rem;
+	  span {
+		font-size:1.375rem;
+	  }
+	}
+
+  }
+}
+
+
+
+
+@media screen and (min-width: $tablet-standard) {
+  .contact {
+
+	&-mail,
+	&-tel {
+	  font-size: 2rem;
+	}
+
+	&-address {
+	  font-size:1.375rem;
+	  span {
+		font-size:1.5rem;
+	  }
+	}
+
+	//#content & .inner {
+	//  padding:9.5rem 2rem;
+	//}
+  }
+}
+
+
+
+@media screen and (min-width: $screen-small) {
+  .contact {
+
+	&-mail,
+	&-tel {
+	  font-size: 2.5rem;
+	}
+
+	&-address {
+	  font-size:1.5rem;
+	  span {
+		font-size:1.75rem;
+	  }
+	}
+
+	//#content & .inner {
+	//  padding:13rem 2rem;
+	//}
+  }
+}
+
+
+@media screen and (min-width: $screen-standard) {
+  .contact {
+
+	&-mail,
+	&-tel {
+	  font-size: 3rem;
+	}
+
+	&-address {
+	  font-size:1.675rem;
+	  span {
+		font-size:2rem;
+	  }
+	}
+  }
+}
+
+
+@media screen and (min-width: $screen-large) {
+  .contact {
+
+	&-mail,
+	&-tel {
+	  font-size: 3.4375rem;
+	}
+
+	&-address {
+	  font-size:1.75rem;
+	  span {
+		font-size:2.25rem;
+	  }
+	}
+  }
+}

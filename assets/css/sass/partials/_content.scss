@@ -1,0 +1,213 @@
+#content {
+  display:block;
+  margin-top:5.625rem;
+  font-size:1.125rem;
+
+	.block {
+	  width:100%;
+	  background-color:$white-color;
+	  &.blue {
+		background-image:linear-gradient(to right,#21BFC1,#1ABFC6,#14BECB,#0DBDD0,#06BCD5,#00BCDA,#00BBDE,#00BAE1,#00BAE3,#00B9E8,#00B9ED,#00B8F1);
+		.headline {
+		  color:$white-color;
+		}
+	  }
+	}
+  .inner {
+	width:100%;
+	max-width:954px;
+	padding:3rem 1.25rem;
+	box-sizing: border-box;
+	margin:0 auto;
+	text-align: left;
+
+  }
+}
+
+
+@media screen and (min-width: $tablet-small) {
+  #content {
+	font-size:1.25rem;
+	.inner {
+		text-align: center;
+  	}
+  }
+}
+
+
+@media screen and (min-width: $tablet-standard) {
+  #content {
+	.inner {
+	  padding:5rem 2rem;
+	}
+  }
+}
+
+@media screen and (min-width: $tablet-large) {
+  #content {
+	font-size:1.375rem
+  }
+}
+
+@media screen and (min-width: $screen-small) {
+  #content {
+	font-size:1.5rem;
+	margin-top:6.125rem;
+	.inner {
+	  padding:7.5rem 2rem;
+	}
+  }
+}
+
+
+
+@media screen and (min-width: $screen-standard) {
+  #content {
+	font-size:1.625rem;
+	//margin-top: 13.5rem;
+	margin-top: 13.125rem;
+	.inner {
+	  padding:9rem 2rem;
+	}
+  }
+}
+
+@media screen and (min-width: $screen-large) {
+  #content {
+	margin-top: 14.375rem;
+	.inner {
+	  padding:11rem 2rem;
+	}
+  }
+}
+
+
+
+/*== Headline ==*/
+.headline {
+  color: $primary-color;
+}
+
+
+
+.bg-image {
+  @include bg-img();
+  height:calc(50vh - 7.125rem);
+  .block:not(.hero) & {
+	max-height:56.25vw;
+  }
+}
+
+@media screen and (min-width: $tablet-small) {
+  .bg-image {
+	height:calc(60vh - 7.125rem);
+  }
+}
+
+@media screen and (min-width: $tablet-large) {
+  .bg-image {
+	height:calc(60vh - 7.125rem);
+  }
+}
+
+@media screen and (min-width: $screen-small) {
+  .bg-image {
+	height:calc(100vh - 6.125rem);
+  }
+}
+
+@media screen and (min-width: $screen-standard) {
+  .bg-image {
+	height:calc(100vh - 13.125rem);
+  }
+}
+
+
+@media screen and (min-width: $screen-large) {
+  .bg-image {
+	height:calc(100vh - 14.375rem);
+	.block:not(.hero) & {
+	  max-height:800px;
+	}
+  }
+}
+
+/*== Arrows ==*/
+
+.arrow {
+  width:5rem;
+  height:1.5rem;
+  position:absolute;
+  bottom:2rem;
+  left:calc(50% - 2.5rem);
+  display:block;
+  color:$white-color;
+  text-indent: -9999rem;
+  &:after {
+	content:"";
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	@include bg-img(contain);
+	background-image:url('../img/arrow.svg');
+	transform: rotate(180deg);
+	.hero & {
+	  display:none;
+	}
+  }
+}
+
+
+
+@media screen and (min-width: $screen-small) {
+  .arrow {
+	&:after {
+	  .hero & {
+		display: block;
+	  }
+	}
+  }
+}
+
+
+.arrow-up {
+  display:none;
+  opacity:0;
+}
+
+@media screen and (min-width: $tablet-large) {
+  .arrow-up {
+	width:4rem;
+	height:4rem;
+	display:block;
+	opacity:0;
+	z-index:-1;
+	position:fixed;
+	top:calc(100vh - 6.25rem);
+	right:2rem;
+
+	@include bg-img(42px 12px,$primary-color);
+	text-indent: -999rem;
+	background-image:url('../img/arrow.svg');
+	background-position-y: 0.75rem;
+
+	&.is--shown {
+	  opacity:1;
+	  z-index:1;
+	}
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+  }
+}
+
+
+@media screen and (min-width: $screen-standard) {
+  .arrow-up {
+	right:3.25rem;
+  }
+}
+

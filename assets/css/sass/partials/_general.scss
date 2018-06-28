@@ -1,0 +1,124 @@
+/***************************************************************\
+	General styles
+\***************************************************************/
+
+img,
+svg,
+object,
+embed,
+iframe {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* Hide scrollbar completely in all IE */
+  /* 	-ms-overflow-style: none; */
+}
+
+body {
+  white-space: normal;
+  background-color:$white-color;
+  color: $text-color;
+  padding:0;
+  box-sizing:border-box;
+  font-family: $font-regular;
+  font-weight: normal;
+  width:100%;
+}
+
+b,
+strong,
+.bold {
+  font: {
+    family: $font-bold;
+    weight: normal;
+  }
+}
+
+
+a {
+  color:$primary-color;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.no-touch a:hover{
+  color:$primary-color;
+}
+
+p {
+  margin:0 auto 1rem auto;
+  line-height: 1.25;
+  &:last-child {
+    margin-bottom:0;
+  }
+}
+
+
+.white {
+  color:$white-color;
+}
+
+
+h2,h3 {
+  //line-height: 1.25;
+  line-height: 1.15;
+  margin-bottom:1.25rem;
+  font: {
+    family: $font-bold;
+    weight: normal;
+    size:1.75rem;
+  }
+}
+
+@media screen and (min-width: $tablet-small) {
+  h2,h3 {
+    font-size:1.875rem;
+    //line-height: 1.2;
+    margin-bottom:1.5rem;
+  }
+}
+
+@media screen and (min-width: $tablet-large) {
+  h2,h3 {
+    font-size:2rem;
+    margin-bottom:1.75rem;
+
+  }
+}
+
+@media screen and (min-width: $screen-small) {
+  h2,h3 {
+    font-size:2.25rem;
+    //line-height: 1.15;
+    margin-bottom:2.25rem;
+  }
+}
+
+@media screen and (min-width: $screen-standard) {
+  h2,h3 {
+    font-size:2.5rem;
+    line-height: 1.1;
+    margin-bottom:2.5rem;
+  }
+}
+
+
+@media screen and (min-width: $screen-large) {
+  h2,h3 {
+    font-size:3.125rem;
+    line-height: 1.06;
+    margin-bottom:3rem;
+  }
+}
+
+h1.title {
+  text-indent: -9999rem;
+  display:none;
+}
+
